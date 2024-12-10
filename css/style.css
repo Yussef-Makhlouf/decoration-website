@@ -649,3 +649,9 @@ h6 {
 .footer .copyright a:hover {
     color: var(--primary);
 }
+@font-face {
+    font-family: 'YourFont';
+    src: url('your-font.woff2') format('woff2');
+    font-display: swap;
+  }
+  
