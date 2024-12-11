@@ -1,0 +1,84 @@
+# Main configuration for all bots
+User-agent: *
+Allow: /
+Sitemap: https://artdyzyn.com/sitemap.xml
+
+# Portfolio section - Art and design showcase
+Allow: /portfolio/
+
+# Services section - Available design services
+Allow: /#services/
+
+# About section - Company and team information
+Allow: /#about/
+
+# Contact section - Get in touch page
+Allow: /#contact/
+
+
+# Projects section - Featured work
+Allow: /#projects/
+Allow: /#Features
+
+# Asset directories
+Allow: /images/    # Image resources
+Allow: /assets/    # General assets
+Allow: /css/       # Stylesheets
+Allow: /js/        # JavaScript files
+
+# Search engine specific rules
+User-agent: Googlebot
+Crawl-delay: 5     # Fast crawling for Google
+
+User-agent: Googlebot-Image
+Allow: /images/    # Allow image indexing
+Allow: /portfolio/ # Allow portfolio images
+
+User-agent: Bingbot
+Crawl-delay: 10    # Standard crawl rate
+
+User-agent: YandexBot
+Crawl-delay: 10    # Standard crawl rate
+
+# Protected system directories and files
+Disallow: /cgi-bin/    # CGI scripts
+Disallow: /tmp/        # Temporary files
+Disallow: /admin/      # Admin area
+Disallow: /private/    # Private content
+Disallow: /backup/     # Backup files
+Disallow: /includes/   # Include files
+Disallow: /logs/       # Log files
+Disallow: /cache/      # Cache files
+Disallow: /config/     # Configuration
+
+# Protected file types
+Disallow: /*.sql$      # Database files
+Disallow: /*.log$      # Log files
+Disallow: /*.conf$     # Config files
+Disallow: /*.config$   # Config files
+Disallow: /*.json$     # JSON data
+Disallow: /*.xml$      # XML files
+Disallow: /*.txt$      # Text files
+Disallow: /*.md$       # Markdown files
+Disallow: /*.yml$      # YAML files
+Disallow: /*.yaml$     # YAML files
+Disallow: /*.env$      # Environment files
+Disallow: /*.lock$     # Lock files
+Disallow: /error_log   # Error logs
+Disallow: /error.log   # Error logs
+Disallow: /.git/       # Git repository
+
+# URL parameter handling
+Disallow: /*?          # URLs with query strings
+Disallow: /*&          # URLs with parameters
+Disallow: /*#          # URLs with fragments
+
+# SEO tool rate limits
+User-agent: AhrefsBot
+Crawl-delay: 10        # Ahrefs crawler
+
+User-agent: MJ12bot
+Crawl-delay: 15        # Majestic crawler
+
+User-agent: SemrushBot
+Crawl-delay: 10        # Semrush crawler
